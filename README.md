@@ -3,6 +3,8 @@ local development branch for redesigning the lambda frontend
 to work in a distributed architecture. 
 eventually this will be deployed in aws prod 
 
+Python version: 3.9
+
 to launch a new zappa deployment: 
 1) activate virtual env 
 2) install zappa inside it (pip install zappa) 

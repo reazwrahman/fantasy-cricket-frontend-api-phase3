@@ -47,9 +47,17 @@ class AllPlayers(object):
     def __PrepareRawData__(self): 
        
         if (AllPlayers.ValidateLink(self.URL)):           
-            raw_data=[]            
-            page = requests.get(self.URL)
-            bs = BeautifulSoup(page.content, 'lxml') 
+            raw_data=[]
+            session = requests.Session()
+            session.headers.update({
+                # "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+                "User-Agent": "PostmanRuntime/7.44.0",
+                "Accept-Language": "en-US,en;q=0.9",
+                "Referer": "https://www.google.com/"
+            })
+
+            response = session.get(self.URL)
+            bs = BeautifulSoup(response.content, 'lxml')
             
             ## put player information into a list  
             table_body=bs.find_all('tbody')
