@@ -5,6 +5,7 @@
         "profile_name": "default",
         "project_name": "fantasy-cricket-frontend",
         "runtime": "python3.9",
-        "s3_bucket": "zappa-0gqarffxx"
+        "s3_bucket": "zappa-0gqarffxx",
+        "slim_handler": true
     }
 }

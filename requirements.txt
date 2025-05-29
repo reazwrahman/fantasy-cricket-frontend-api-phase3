@@ -71,3 +71,4 @@ Werkzeug==0.12.2
 WTForms==2.2
 zappa==0.59.0
 zipp==3.11.0
+setuptools==74.1.2
